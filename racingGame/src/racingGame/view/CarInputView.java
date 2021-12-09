@@ -4,7 +4,7 @@ import static racingGame.constant.ViewConstant.INPUT_CAR_NAME;
 
 public class CarInputView {
 	
-	public void carInput() {
+	public void carInputView() {
 		System.out.println(INPUT_CAR_NAME);
 	}
 }
