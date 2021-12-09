@@ -6,6 +6,7 @@ import static racingGame.exception.CarInputException.carException;
 import java.util.Scanner;
 
 import racingGame.domain.CarCollection;
+import racingGame.view.CarInputView;
 
 public class CarInputService {
 	public CarCollection carInput(Scanner sc) {
@@ -13,8 +14,10 @@ public class CarInputService {
 		boolean flag = true;
 		String carNames = null;
 		
+		CarInputView carInputView = new CarInputView();
+		
 		while(flag) {
-			System.out.println(INPUT_CAR_NAME);
+			carInputView.carInputView();
 			
 			carNames = sc.next();
 			
