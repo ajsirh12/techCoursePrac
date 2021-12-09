@@ -8,16 +8,19 @@ public class MovingInputException {
 		
 	}
 	
-	public void movingException(String num) {
-		chkNum(num);
+	public int movingException(String num) {
+		return chkNum(num);
 	}
 
-	private void chkNum(String num) {
+	private int chkNum(String num) {
+		int result;
 		try {
-			int i = Integer.parseInt(num);
+			result = Integer.parseInt(num);
 		}catch (Exception e) {
 			// TODO: handle exception
 			throw new IllegalArgumentException(INCORRECT_NUM);
 		}
+		
+		return result;
 	}
 }
