@@ -10,6 +10,10 @@ public class CarCollection {
 		this.cars = cars;
 	}
 	
+	public List<Car> getCarCollection(){
+		return cars;
+	}
+	
 	public String getCarName(int i) {
 		Car car = cars.get(i);
 		
