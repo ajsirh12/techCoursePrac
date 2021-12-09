@@ -3,29 +3,27 @@ package racingGame.service;
 import static racingGame.constant.ViewConstant.INPUT_CAR_NAME;
 import static racingGame.exception.CarInputException.carException;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
-import racingGame.domain.Car;
+import racingGame.domain.CarCollection;
 
 public class CarInputService {
-	public List<Car> carInput(Scanner sc) {
-		
-		List<Car> carList = new ArrayList<Car>(); 
+	public CarCollection carInput(Scanner sc) {
 		
 		boolean flag = true;
+		String carNames = null;
 		
 		while(flag) {
 			System.out.println(INPUT_CAR_NAME);
 			
-			String carNames;
 			carNames = sc.next();
 			
 			flag = chkInput(carNames);
 		}
 		
-		return carList;
+		CarCollection carCollection = new CarService().carCollection(carNames);
+		
+		return carCollection;
 	}
 	
 	private boolean chkInput(String carNames) {
