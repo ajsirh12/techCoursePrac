@@ -5,6 +5,7 @@ import static racingGame.constant.ViewConstant.FINAL_RESULT;
 import java.util.List;
 
 import racingGame.domain.Car;
+import racingGame.domain.CarCollection;
 
 public class ResultView {
 
@@ -22,14 +23,14 @@ public class ResultView {
 		return result;
 	}
 	
-	public void resultView(List<Car> carList) {
-		System.out.println(FINAL_RESULT + lastWinner(carList));
+	public void resultView(CarCollection cars) {
+		System.out.println(FINAL_RESULT + lastWinner(cars));
 	}
 	
-	private String lastWinner(List<Car> carList) {
+	private String lastWinner(CarCollection cars) {
 		String result = "";
 		
-		for(Car car : carList) {
+		for(Car car : cars.getCarCollection()) {
 			result += (car.getName() + ", ");
 		}
 		result = result.substring(0, result.length() - 2);
