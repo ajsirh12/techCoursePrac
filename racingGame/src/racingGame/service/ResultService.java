@@ -4,12 +4,12 @@ import racingGame.domain.CarCollection;
 import racingGame.view.ResultView;
 
 public class ResultService {
+
+	ResultView resultView = new ResultView();
 	
 	public CarCollection resultService(CarCollection carCollection, int cnt) {
 		
 		CarCollection result = carCollection;
-		
-		ResultView resultView = new ResultView();
 		
 		resultView.titleView();
 		
@@ -31,8 +31,6 @@ public class ResultService {
 	
 	private CarCollection goStop(CarCollection carCollection) {
 		CarCollection result = carCollection;
-		
-		ResultView resultView = new ResultView();
 		RandomService random = new RandomService();
 		int size = result.getCarSize();
 		
