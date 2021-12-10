@@ -8,11 +8,11 @@ public class MovingInputException {
 		
 	}
 	
-	public int movingException(String num) {
+	public static int movingException(String num) {
 		return chkNum(num);
 	}
 
-	private int chkNum(String num) {
+	private static int chkNum(String num) {
 		int result;
 		try {
 			result = Integer.parseInt(num);
