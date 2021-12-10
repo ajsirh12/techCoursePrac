@@ -6,6 +6,7 @@ import racingGame.domain.CarCollection;
 import racingGame.service.CarInputService;
 import racingGame.service.ResultService;
 import racingGame.service.TryInputService;
+import racingGame.service.WinnerService;
 
 public class MainController {
 	
@@ -24,6 +25,7 @@ public class MainController {
 		ResultService resultService = new ResultService();
 		carCollection = resultService.resultService(carCollection, cnt);
 		
-		
+		WinnerService winnerService = new WinnerService();
+		winnerService.winner(carCollection);
 	}
 }
