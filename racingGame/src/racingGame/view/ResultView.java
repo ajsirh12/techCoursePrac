@@ -1,13 +1,16 @@
 package racingGame.view;
 
 import static racingGame.constant.ViewConstant.FINAL_RESULT;
-
-import java.util.List;
+import static racingGame.constant.ViewConstant.PROC_RESULT;
 
 import racingGame.domain.Car;
 import racingGame.domain.CarCollection;
 
 public class ResultView {
+	
+	public void titleView() {
+		System.out.println(PROC_RESULT);
+	}
 
 	public void progressView(Car car) {
 		System.out.println(car.getName() + " : " + cntPosition(car.getPosition()));
