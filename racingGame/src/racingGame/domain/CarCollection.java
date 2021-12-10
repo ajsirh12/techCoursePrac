@@ -35,4 +35,8 @@ public class CarCollection {
 	public int getCarSize() {
 		return cars.size();
 	}
+	
+	public Car getCar(int i) {
+		return cars.get(i);
+	}
 }
