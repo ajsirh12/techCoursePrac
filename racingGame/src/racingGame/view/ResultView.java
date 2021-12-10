@@ -20,7 +20,7 @@ public class ResultView {
 		String result = "";
 		
 		for(int i=0; i<num; i++) {
-			result += "_";
+			result += "- ";
 		}
 		
 		return result;
