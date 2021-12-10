@@ -31,4 +31,8 @@ public class CarCollection {
 		
 		car.carMove();
 	}
+	
+	public int getCarSize() {
+		return cars.size();
+	}
 }
