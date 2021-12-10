@@ -30,6 +30,10 @@ public class ResultView {
 		System.out.println(FINAL_RESULT + lastWinner(cars));
 	}
 	
+	public void resultView(String winners) {
+		System.out.println(FINAL_RESULT + winners);
+	}
+	
 	private String lastWinner(CarCollection cars) {
 		String result = "";
 		
