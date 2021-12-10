@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import racingGame.domain.CarCollection;
 import racingGame.service.CarInputService;
+import racingGame.service.TryInputService;
 
 public class MainController {
 	
@@ -16,5 +17,9 @@ public class MainController {
 		CarInputService carInputService = new CarInputService();
 		
 		carCollection = carInputService.carInput(sc);
+		
+		int cnt = new TryInputService().tryInputService(sc);
+		
+		
 	}
 }
