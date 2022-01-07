@@ -6,7 +6,7 @@ import java.util.List;
 
 public class CarCollection {
 	
-	List<Car> cars;
+	private List<Car> cars;
 	private List<Car> copyCars = new ArrayList<Car>();
 	
 	public CarCollection(List<Car> cars) {
