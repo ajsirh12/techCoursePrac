@@ -1,17 +1,21 @@
 package racingGame.domain;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class CarCollection {
 	
 	List<Car> cars;
+	private List<Car> copyCars = new ArrayList<Car>();
 	
 	public CarCollection(List<Car> cars) {
 		this.cars = cars;
 	}
 	
 	public List<Car> getCarCollection(){
-		return cars;
+		Collections.copy(copyCars, cars);
+		return copyCars;
 	}
 	
 	public String getCarName(int i) {
